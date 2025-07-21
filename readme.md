@@ -112,13 +112,15 @@ name=Ankit Mishra&email=ankitmishra8268@example.com&password=secret123&dob=1999-
 
 ```
 user-crud-core-php/
+├── autoload/
+│   └── Autoloader.php
 ├── controllers/
-│   └── UserController.php       # UserController class with all CRUD methods
+│   └── UserController.php  # UserController class with all CRUD methods
 ├── database/
-│   └── Database.php             # Database connection class
+│   └── Database.php        # Database connection class
 ├── routes/
-│   └── api.php                 # API entry point & autoloader
-└── README.md                   # This file
+│   └── api.php             # API entry point
+└── readme.md  
 ```
 
 ---
