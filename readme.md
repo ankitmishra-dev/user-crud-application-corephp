@@ -1,7 +1,6 @@
 # User CRUD REST API in Core PHP
 
-A simple RESTful API built with core PHP for managing users, supporting **Create, Read, Update, Delete** operations.
-This project demonstrates a clean architecture using classes, a custom autoloader, and MySQL database connection handling.
+A simple and secure RESTful API built using Core PHP to perform CRUD (Create, Read, Update, Delete) operations on a user entity. This project includes modular class-based architecture, secure password handling, a .env-based configuration system, and version control with Git.
 
 ---
 
@@ -32,6 +31,18 @@ This project demonstrates a clean architecture using classes, a custom autoloade
 
 ```bash
 git clone https://github.com/ankitmishra-dev/user-crud-application-corephp.git
+
+cd user-crud-application-corephp
+
+cp .env.example .env
+
+Edit .env to match your MySQL configuration:
+
+DB_HOST=localhost
+DB_NAME=users_crud
+DB_USER=root
+DB_PASS=
+
 ```
 
 ### 2. Create the database and `users` table
@@ -112,15 +123,21 @@ name=Ankit Mishra&email=ankitmishra8268@example.com&password=secret123&dob=1999-
 
 ```
 user-crud-core-php/
-├── autoload/
+├── autoload/               # Custom autoloader
 │   └── Autoloader.php
-├── controllers/
-│   └── UserController.php  # UserController class with all CRUD methods
-├── database/
-│   └── Database.php        # Database connection class
-├── routes/
-│   └── api.php             # API entry point
-└── readme.md  
+├── config/                 # Environment loader
+│   └── env.php
+├── controllers/            # Business logic (UserController)
+│   └── UserController.php
+├── database/               # DB connection using .env
+│   └── Database.php
+├── routes/                 # API entry point
+│   └── api.php
+├── .env                    # (ignored) Environment variables
+├── .env.example            # Example env file to copy from
+├── .gitignore              # Git exclusions
+└── README.md
+
 ```
 
 ---
